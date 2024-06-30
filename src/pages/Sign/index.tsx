@@ -9,9 +9,9 @@ const Sign = () => {
     <View style={styles.container}>
       <Image source={Llogo} style={styles.image} />
 
-      <Button label="LOGIN" color="#3060d5" textColor="white" />
+      <Button label="LOGIN" color="#007bff" textColor="white" />
       <Gap height={15} />
-      <Button label="SIGN UP" color="#3060d5" textColor="white" />
+      <Button label="SIGN UP" color="#007bff" textColor="white" />
     </View>
   );
 };
