@@ -20,9 +20,12 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   input: {
+    backgroundColor:'white',
+    paddingVertical: 15,
+    paddingHorizontal: 150,
+    borderRadius: 30,
     borderWidth: 1,
-    borderColor: '#8D92A3',
-    borderRadius: 8,
+    borderColor: 'blue',
     padding: 10,
   },
 });

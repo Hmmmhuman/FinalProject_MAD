@@ -9,8 +9,9 @@ import {
   Image,
 } from 'react-native';
 import {BlurView} from '@react-native-community/blur'; // Import BlurView component
-
-import {Llogo} from '../../assets/icons';
+import {Button, Gap} from '../../component/atoms/index';
+import {TextInput} from '../../component';
+import {Llogo, IconHelp, Livin} from '../../assets/icons';
 
 const App = () => {
   const [modalVisible, setModalVisible] = useState(false);
@@ -28,7 +29,23 @@ const App = () => {
 
   return (
     <View style={styles.centeredView}>
-      <Image source={Llogo} style={styles.image} />
+      <View style={styles.main}>
+        <View style={styles.container}>
+          <View style={styles.header}>
+            <Image source={IconHelp} style={styles.iconimage} />
+          </View>
+          <Image source={Llogo} style={styles.image} />
+
+          <Button
+            label="LOGIN"
+            color="#007bff"
+            textColor="white"
+            onPress={handleModalOpen}
+          />
+          <Gap height={15} />
+          <Button label="SIGN UP" color="#007bff" textColor="white" />
+        </View>
+      </View>
 
       {/* Apply blur effect using BlurView conditionally based on blurAmount */}
       {blurAmount > 0 && (
@@ -46,7 +63,11 @@ const App = () => {
         onRequestClose={handleModalClose}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Hello World!</Text>
+            <Image source={Livin} style={styles.image} />
+
+            <TextInput placeholder="Type your full name" />
+            <Gap height={15} />
+            <Button label="LOGIN" color="#007bff" textColor="white" />
             <Pressable
               style={[styles.button, styles.buttonClose]}
               onPress={handleModalClose}>
@@ -55,29 +76,39 @@ const App = () => {
           </View>
         </View>
       </Modal>
-
-      <Pressable
-        style={[styles.button, styles.buttonOpen]}
-        onPress={handleModalOpen}>
-        <Text style={styles.textStyle}>Show Modal</Text>
-      </Pressable>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  main: {
+    flex: 1,
+  },
+
+  header: {
+    marginHorizontal: 20,
+    marginTop: 20,
+  },
+  container: {
+    backgroundColor: 'white',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  iconimage: {
+    height: 45,
+    width: 45,
+  },
+
   centeredView: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 22,
   },
   modalView: {
     margin: 20,
     height: 400,
     width: 400,
-    borderRadius: 20,
-    padding: 35,
+    padding: 25,
     alignItems: 'center',
     shadowColor: '#000',
   },
@@ -91,11 +122,6 @@ const styles = StyleSheet.create({
   },
   buttonClose: {
     backgroundColor: '#2196F3',
-  },
-  textStyle: {
-    color: 'white',
-    fontWeight: 'bold',
-    textAlign: 'center',
   },
   modalText: {
     marginBottom: 15,

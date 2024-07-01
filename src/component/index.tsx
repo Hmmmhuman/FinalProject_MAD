@@ -1,3 +1,3 @@
-import TextInput from './molecules/TextInput';
+import TextInput from './molecules/TextInput/index';
 
 export {TextInput};
