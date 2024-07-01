@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
     paddingHorizontal: 150,
     borderRadius: 30,
+    fontWeight: 'bold',
   }),
   label: textColor => ({
     fontFamily: 'Poppins-Medium',

@@ -9,13 +9,13 @@ const Sign = () => {
     <View style={styles.main}>
       <View style={styles.header}>
         <Image source={IconHelp} style={styles.iconimage} />
-        <View style={styles.container}>
-          <Image source={Llogo} style={styles.image} />
+      </View>
+      <View style={styles.container}>
+        <Image source={Llogo} style={styles.image} />
 
-          <Button label="LOGIN" color="#007bff" textColor="white" />
-          <Gap height={15} />
-          <Button label="SIGN UP" color="#007bff" textColor="white" />
-        </View>
+        <Button label="LOGIN" color="#007bff" textColor="white" />
+        <Gap height={15} />
+        <Button label="SIGN UP" color="#007bff" textColor="white" />
       </View>
     </View>
   );
@@ -28,7 +28,11 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 
-  header: {},
+  header: {
+    alignItems: 'flex-end',
+    marginHorizontal: 20,
+    marginTop: 20,
+  },
   container: {
     backgroundColor: 'white',
     justifyContent: 'center',
