@@ -1,9 +1,14 @@
 import {StyleSheet, Text, View, Image} from 'react-native';
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Llogo} from '../../assets/icons';
 import {Lts} from '../../assets/icons';
 
-const SplashScreen = () => {
+const SplashScreen = ({navigation}) => {
+  useEffect(() => {
+    setTimeout(() => {
+      navigation.replace('Sign');
+    }, 3000);
+  }, []);
   return (
     <View style={styles.container}>
       <Image source={Llogo} style={styles.avatar} />
