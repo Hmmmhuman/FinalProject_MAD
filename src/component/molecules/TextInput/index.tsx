@@ -18,11 +18,15 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#020202',
     fontWeight: 'bold',
+    paddingBottom: 10,
   },
   input: {
-    borderWidth: 1,
-    borderColor: '#8D92A3',
-    borderRadius: 8,
+    backgroundColor: 'white',
+    paddingVertical: 15,
+    paddingHorizontal: 20,
+    borderRadius: 30,
+    borderWidth: 2,
+    borderColor: 'blue',
     padding: 10,
   },
 });

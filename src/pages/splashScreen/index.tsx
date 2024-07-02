@@ -15,7 +15,7 @@ const SplashScreen = ({navigation}) => {
       <View style={styles.footer}>
         <Image source={Lts} style={styles.lts} />
         <Text style={styles.title}>
-          PT Bank Mandiri (Persero) Tbk.berizin dan diawasi oleh Otoritas Jasa
+          PT Bank Mandiri (Persero) Tbk.berizin dan diawasi oleh Otoritas Jasa  
           Keuangan (OJK) serta merupakan peserta penjamin Lembaga Penjamin
           Simpanan(LPS)
         </Text>

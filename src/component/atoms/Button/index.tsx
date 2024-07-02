@@ -18,8 +18,9 @@ const styles = StyleSheet.create({
   button: color => ({
     backgroundColor: color,
     paddingVertical: 15,
-    paddingHorizontal: 150,
+    width: 350,
     borderRadius: 30,
+    fontWeight: 'bold',
   }),
   label: textColor => ({
     fontFamily: 'Poppins-Medium',
