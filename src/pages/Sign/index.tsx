@@ -32,10 +32,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
     marginHorizontal: 20,
     marginTop: 20,
-<<<<<<< HEAD
     width: 400,
-=======
->>>>>>> c904a8cdd7631fb7ef8b3b2b5548641790e47259
   },
   container: {
     backgroundColor: 'white',
