@@ -85,7 +85,7 @@ const SignIn = ({navigation}) => {
         onRequestClose={handleModalClose}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Pressable style={styles.exit}>
+            <Pressable style={styles.exit} onPress={handleModalClose}>
               <Image source={Exit} style={styles.exitimage} />
             </Pressable>
             <Image source={Livin} style={styles.image} />
