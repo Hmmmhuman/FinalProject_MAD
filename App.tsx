@@ -1,3 +1,4 @@
+// App Component
 import React from 'react';
 import SplashScreen from './src/pages/splashScreen/index';
 import HomePage from './src/pages/HomePage/index';
@@ -9,27 +10,25 @@ const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
-    <>
-      <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen
-            name="Splash"
-            component={SplashScreen}
-            options={{headerShown: false}}
-          />
-          <Stack.Screen
-            name="Sign"
-            component={SignIn}
-            options={{headerShown: false}}
-          />
-          <Stack.Screen
-            name="Page"
-            component={HomePage}
-            options={{headerShown: false}}
-          />
-        </Stack.Navigator>
-      </NavigationContainer>
-    </>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Splash"
+          component={SplashScreen}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Sign"
+          component={SignIn}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Page"
+          component={HomePage}
+          options={{headerShown: false}}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 

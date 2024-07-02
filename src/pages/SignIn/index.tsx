@@ -1,3 +1,4 @@
+// SignIn Component
 import React, {useState} from 'react';
 import {
   Alert,
@@ -13,10 +14,11 @@ import {BlurView} from '@react-native-community/blur'; // Import BlurView compon
 import {Button, Gap} from '../../component/atoms/index';
 import {TextInput} from '../../component';
 import {Llogo, IconHelp, Livin, Exit} from '../../assets/icons';
+import HomePage from '../HomePage';
 
 const SignIn = ({navigation}) => {
   const [modalVisible, setModalVisible] = useState(false);
-  const [modalVisibleSignUp, setmodalVisibleSignUp] = useState(false);
+  const [modalVisibleSignUp, setModalVisibleSignUp] = useState(false);
   const [blurAmount, setBlurAmount] = useState(0); // State for blur amount
 
   const handleModalOpen = () => {
@@ -25,12 +27,12 @@ const SignIn = ({navigation}) => {
   };
 
   const handleModalOpenSignup = () => {
-    setmodalVisibleSignUp(true);
+    setModalVisibleSignUp(true);
     setBlurAmount(10);
   };
 
   const handleModalCloseSignUp = () => {
-    setmodalVisibleSignUp(!modalVisibleSignUp);
+    setModalVisibleSignUp(!modalVisibleSignUp);
     setBlurAmount(0);
   };
 
@@ -40,6 +42,10 @@ const SignIn = ({navigation}) => {
   };
 
   const handleiconpress = () => {};
+
+  const handleLoginPress = () => {
+    navigation.navigate('Page');
+  };
 
   return (
     <View style={styles.centeredView}>
@@ -93,12 +99,12 @@ const SignIn = ({navigation}) => {
             <TextInput placeholder="PASSWORD" />
             <Gap height={15} />
 
-            <Pressable>
+            <Pressable onPress={handleLoginPress}>
               <Button
                 label="LOGIN"
                 color="#007bff"
                 textColor="white"
-                onPress={() => navigation.navigate('page')}
+                onPress={handleLoginPress}
               />
             </Pressable>
           </View>
@@ -193,3 +199,5 @@ const styles = StyleSheet.create({
     bottom: 0,
   },
 });
+
+SignIn;
