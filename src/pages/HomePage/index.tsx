@@ -1,5 +1,5 @@
 import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import {LivinHeader} from '../../assets/icons';
 import {
   Transfer,
@@ -13,8 +13,8 @@ import {
 import {Gapwidth} from '../../component/atoms';
 
 const HomePage = ({navigation}) => {
-  
   const handleiconpress = () => {};
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>

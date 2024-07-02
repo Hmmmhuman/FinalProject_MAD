@@ -41,10 +41,6 @@ const SignIn = ({navigation}) => {
 
   const handleiconpress = () => {};
 
-  const onSubmit = () => {
-    navigation.navigate('Page');
-  };
-
   return (
     <View style={styles.centeredView}>
       <View style={styles.header}>
@@ -89,7 +85,7 @@ const SignIn = ({navigation}) => {
         onRequestClose={handleModalClose}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Pressable style={styles.exit} onPress={handleModalClose}>
+            <Pressable style={styles.exit}>
               <Image source={Exit} style={styles.exitimage} />
             </Pressable>
             <Image source={Livin} style={styles.image} />
@@ -97,12 +93,14 @@ const SignIn = ({navigation}) => {
             <TextInput placeholder="PASSWORD" />
             <Gap height={15} />
 
-            <Button
-              label="LOGIN"
-              color="#007bff"
-              textColor="white"
-              onPress={onSubmit}
-            />
+            <Pressable>
+              <Button
+                label="LOGIN"
+                color="#007bff"
+                textColor="white"
+                onPress={() => navigation.navigate('page')}
+              />
+            </Pressable>
           </View>
         </View>
       </Modal>
