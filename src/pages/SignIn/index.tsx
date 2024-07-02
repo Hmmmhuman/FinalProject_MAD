@@ -14,7 +14,7 @@ import {Button, Gap} from '../../component/atoms/index';
 import {TextInput} from '../../component';
 import {Llogo, IconHelp, Livin, Exit} from '../../assets/icons';
 
-const App = () => {
+const SignIn = ({navigation}) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [modalVisibleSignUp, setmodalVisibleSignUp] = useState(false);
   const [blurAmount, setBlurAmount] = useState(0); // State for blur amount
@@ -40,6 +40,10 @@ const App = () => {
   };
 
   const handleiconpress = () => {};
+
+  const onSubmit = () => {
+    navigation.navigate('Page');
+  };
 
   return (
     <View style={styles.centeredView}>
@@ -93,7 +97,12 @@ const App = () => {
             <TextInput placeholder="PASSWORD" />
             <Gap height={15} />
 
-            <Button label="LOGIN" color="#007bff" textColor="white" />
+            <Button
+              label="LOGIN"
+              color="#007bff"
+              textColor="white"
+              onPress={onSubmit}
+            />
           </View>
         </View>
       </Modal>
@@ -123,6 +132,8 @@ const App = () => {
     </View>
   );
 };
+
+export default SignIn;
 
 const styles = StyleSheet.create({
   main: {
@@ -184,5 +195,3 @@ const styles = StyleSheet.create({
     bottom: 0,
   },
 });
-
-export default App;
