@@ -1,3 +1,4 @@
 import TextInput from './molecules/TextInput/index';
+import Header from '../../index';
 
-export {TextInput};
+export {TextInput, Header};
